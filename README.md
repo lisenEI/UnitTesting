@@ -11,13 +11,13 @@
 
 # 如何做单元测试？
 ## 工作流
-<img src="images/testing-workflow.png" width="150" hegiht="60" align=center />
+<img src="images/testing-workflow.png" width="600" hegiht="400" align=center />
 
 * 当我们开发一个功能的时候，会先写单元测试（可能是在原来的基础上添加，也可能是新创建的），这时候单元测试是失败的，因为功能还没有开发。
 * 开发功能过程中，会思考如何测试，功能和测试互相影响，直到整个流程可以跑通。
 
 ## 金字塔
-<img src="images/pyramid.png" width="150" hegiht="60" align=center />
+<img src="images/pyramid.png" width="600" hegiht="425" align=center />
 
 测试包含单元测试、集成测试和 UI 测试，三部分，推荐的占比为 70%、20% 和 10% 。
 
@@ -25,7 +25,7 @@
 
 集成测试和 UI 测试，需要依赖设备运行，运行时间和成本都比较高。
 
-<img src="images/testing-pyramid.jpg" width="150" hegiht="60" align=center />
+<img src="images/testing-pyramid.jpg" width="600" hegiht="320" align=center />
 
 # 可供单元测试的框架
 * JUnit
@@ -45,7 +45,7 @@ testImplementation 'junit:junit:4.12'
 
 下面是一个测试过程：
 
-<img src="images/unit_test_flow.png" width="200" hegiht="50" align=center />
+<img src="images/unit_test_flow.png" width="600" hegiht="150" align=center />
 
 上面的图可以看到两个信息：
 * Annotation 注解
@@ -153,7 +153,7 @@ Test1
 Assert 提供的方法：
 * assertTrue(boolean) 断言为 true
 * assertFalse(boolean) 断言为 false
-* fail(String) 断言失败，常用于判断方法的执行
+* fail(String) 断言失败，常用于判断方法的执行
 * assertEquals() 断言相等
 * assertNotEquals() 断言不相等
 * assertArrayEquals() 断言数组相等
@@ -252,7 +252,7 @@ CoreMatchers 类提供的方法：
 
 <img src="images/mockito.png" width="200" hegiht="100" align=center />
 
-Mockito 可以 mock 创建一个对象，验证方法的执行和 mock 方法的返回值。
+Mockito 可以 mock 创建一个对象，验证方法的执行和 mock 方法的返回值。
 
 ### 添加依赖：
 ```java
@@ -342,10 +342,10 @@ public class MockRuleTest {
 Mockito 可以 Mock 方法的返回值，提供的方法：
 
 doxxx().when()
-* doThrow(Throwable...) 调用某个方法时抛出异常
+* doThrow(Throwable...) 调用某个方法时抛出异常
 * doCallRealMethod() 调用真实的方法
 * doAnswer(Answer) 通过 Answer 处理方法调用结果
-* doNothing() 调用方法时，什么都不执行
+* doNothing() 调用方法时，什么都不执行
 * doReturn() 调用方法时返回某个值
 
 when().then()
@@ -357,7 +357,7 @@ when().then()
 
 then().should()
 * then().should(VerificationMode) 验证应该怎样
-* then().shouldHaveNoMoreInteractions() 验证没有执行过
+* then().shouldHaveNoMoreInteractions(）验证没有执行过
 * then().shouldHaveZeroInteractions() 验证没有执行过
 
 given().willxxx()
@@ -368,7 +368,7 @@ given().willxxx()
 * given().willReturn() 返回某个值
 * given().willCallRealMethod() 调用真实的方法
 
-举个例子：
+举个例子：
 ```java
 public class MockResultTest {
 
@@ -479,15 +479,15 @@ verify 可以用来验证方法有没有执行，方法的执行顺序等。
 
 verify(T mock, VerificationMode mode)
 
-* times(int) 验证执行几次
+* times(int) 验证执行几次
 * never() 验证从未执行过
 * atLeastOnce() 验证至少执行一次
 * atLeast(int) 验证至少执行 n 次
-* atMost(int) 验证最多执行 n 次
-* calls(int) 验证调用 n 次
+* atMost(int) 验证最多执行 n 次
+* calls(int) 验证调用 n 次
 * only() 验证只执行了某个方法
 * timeout(long) 验证超时（方法执行完立刻得到结论），耗费时间 < long
-* after(long) 验证超时（需要 long 时间以后才会得出结论，需要等待），耗费时间 > long
+* after(long) 验证超时（需要 long 时间以后才会得出结论，需要等待），耗费时间 > long
 * description(String) 添加描述，失败后打印描述信息
 * InOrder 验证顺序执行
   
@@ -688,7 +688,7 @@ shadow foo
 
 Robolectric 使用方法
 
-1.首先需要在测试类添加注解 @RunWith(RobolectricTestRunner.class)
+1.首先需要在测试类添加注解 @RunWith(RobolectricTestRunner.class)
 
 2.然后增加注解 @Config()
 
