@@ -914,3 +914,10 @@ public class ShadowsTest {
 
 }
 ```
+
+# 相关文档
+* [Robolectric](http://robolectric.org/)
+* [Mockito-core 2.23.4 API](https://static.javadoc.io/org.mockito/mockito-core/2.23.4/org/mockito/Mockito.html)
+* [https://developer.android.com/training/testing/](https://developer.android.com/training/testing/)
+* [Robolectric Shadow类实现方式探索](https://www.jianshu.com/p/d760e48ea7b0)
+* [Android单元测试](https://blog.csdn.net/qq_17766199/column/info/18260)
